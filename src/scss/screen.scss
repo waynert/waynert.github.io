@@ -1,0 +1,32 @@
+/*! Built by Tyler Wayner Designs */
+
+/*-------------------------------------------
+  Variables
+-------------------------------------------*/
+
+$red:  		#FF3300;
+$blue: 		#0000FF;
+$green: 	#004400;
+$dark-font: #000000;
+
+
+/*-------------------------------------------
+  Partials
+-------------------------------------------*/
+
+@import 'pieces/normalize';
+@import 'pieces/mixins';
+@import 'pieces/base';
+@import 'pieces/footer';
+@import 'pieces/contact';
+@import 'pieces/process';
+@import 'pieces/work-in-progress';
+@import 'pieces/work';
+@import 'pieces/about';
+<<<<<<< HEAD
+@import 'pieces/header';
+=======
+@import 'pieces/services';
+@import 'pieces/header';
+@import 'pieces/consultation-modal';
+>>>>>>> origin/develop

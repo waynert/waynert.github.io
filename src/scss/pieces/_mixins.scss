@@ -1,0 +1,110 @@
+/*-------------------------------------------
+	Clearfix
+-------------------------------------------*/
+
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+/*-------------------------------------------
+	Media Queries
+-------------------------------------------*/
+
+@mixin min-up($min) {
+	@media only screen and (min-width: $min) { @content; }
+}
+
+@mixin max-down($max) {
+	@media only screen and (max-width: $max) { @content; }
+}
+
+@mixin min-max($min, $max) {
+	@media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}
+
+/*
+	Personal Usage Note:
+	max-down always ends with .99 or .#99
+
+	@include min-up(768px) {
+		.element {
+			width: 100%;
+		}
+	}
+}
+
+*/
+
+
+/*-------------------------------------------
+	Show/Hide text - Image Replacement
+-------------------------------------------*/
+
+%hide-text {
+	display: block; 	// always needed
+	text-indent: 150%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+%unhide-text {
+	// set display as needed
+	text-indent: 0;
+	white-space: normal;
+	overflow: visible;
+}
+
+
+/*-------------------------------------------
+	Visually Hidden Text - Available to Screen Readers
+-------------------------------------------*/
+
+%visually-hidden {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+    width: 1px;
+	height: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+/*-------------------------------------------
+	UL/OL reset
+-------------------------------------------*/
+
+%list-reset {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+
+/*-------------------------------------------
+	Vertical Centering
+-------------------------------------------*/
+
+@mixin vertical-align($val: 47%) {
+
+	// unset
+	@if $val == 'none' {
+	    top: auto;
+		-webkit-transform: none;
+		   -moz-transform: none;
+		    -ms-transform: none;
+				transform: none;
+
+   	} @else {
+		position: relative;
+		top: $val;
+		-webkit-transform: translateY(-50%);
+		   -moz-transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+   	}
+}
