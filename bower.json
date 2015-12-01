@@ -1,0 +1,17 @@
+{
+  "name": "tyler_wayner_designs",
+  "version": "1.0.0",
+  "devDependencies": {
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "respond": "~1.4.2",
+    "selectivizr": "~1.0.2"
+  }
+}

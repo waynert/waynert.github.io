@@ -1,0 +1,30 @@
+.header {
+  background-color: black;
+
+  h1 {
+    margin:auto;
+    height: 137px;
+    width: 177px;
+    display: block;
+    text-indent: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url('http://dev.robinhoodink.com/assets/img/robinhood_ink_logo.png');
+    background-repeat: no-repeat;
+  }
+
+  p {
+    text-align: center;
+    font-family: serif;
+    font-size: 4.5rem;
+  }
+  button {
+    margin:auto;
+    display: block;
+    border: none;
+    background-color: $red;
+    color:white;
+    text-transform: uppercase;
+    padding:24px 40px;
+  }
+}
